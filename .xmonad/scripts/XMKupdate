@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# arch
+arch=`checkupdates | wc -l`
+archFrm=`printf "%3d" $arch`
+# AUR
+aur=`checkupdates-aur | wc -l`
+aurFrm=`printf "%3d" aur`
+
+if [ "$arch" -eq "0" -a "$aur" -eq "0" ]
+	then echo "<fc=white><fn=2>   </fn></fc><fc=white>$archFrm </fc><fc=white><fn=2>  </fn></fc><fc=white> $aurFrm </fc> "
+
+elif [ "$arch" -gt "0" -a "$aur" -eq "0" ]
+	then echo "<fc=white><fn=2>   </fn></fc><fc=white>$archFrm </fc><fc=white><fn=2>  </fn></fc><fc=white> $aurFrm </fc> "
+elif [ "$arch" -eq "0" -a "$aur" -gt "0" ]
+	then echo "<fc=white><fn=2>   </fn></fc><fc=white>$archFrm </fc><fc=white><fn=2>  </fn></fc><fc=white> $aurFrm </fc> "
+else
+	echo "<fc=white><fn=2>   </fn></fc><fc=white>$archFrm </fc><fc=white><fn=2>  </fn></fc><fc=white> $aurFrm </fc> "
+
+
+fi
+exit 0
+
