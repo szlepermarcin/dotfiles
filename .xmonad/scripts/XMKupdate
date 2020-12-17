@@ -5,7 +5,7 @@ arch=`checkupdates | wc -l`
 archFrm=`printf "%3d" $arch`
 # AUR
 aur=`checkupdates-aur | wc -l`
-aurFrm=`printf "%3d" aur`
+aurFrm=`printf "%3d" $aur`
 
 if [ "$arch" -eq "0" -a "$aur" -eq "0" ]
 	then echo "<fc=white><fn=2>   </fn></fc><fc=white>$archFrm </fc><fc=white><fn=2>  </fn></fc><fc=white> $aurFrm </fc> "

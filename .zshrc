@@ -115,7 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 alias man="/home/slepy/.local/share/nvim/plugged/vim-superman/bin/vman"
+alias msi-keyboard='/usr/bin/msi-keyboard-light -c $HOME/.config/msi-keyboard/config.yaml -p'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh

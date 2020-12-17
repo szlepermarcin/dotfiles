@@ -50,7 +50,7 @@ Config {
       , Run Com "/bin/bash" ["-c", "$HOME/.xmonad/scripts/XMgetvolume"]  "XVol" 10
 
 
-      , Run Kbd                                [ ("be" , "<fc=#FFFFFF>BE</fc>")
+      , Run Kbd                                [ ("pl" , "<fc=#FFFFFF>PL</fc>")
                                                 , ("us" , "<fc=#FFFFFF>US</fc>")]
 
       , Run UnsafeStdinReader
