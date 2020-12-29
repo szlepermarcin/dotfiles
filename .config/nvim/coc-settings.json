@@ -2,11 +2,11 @@
   "metals.javaHome": "/usr/lib/jvm/default-runtime/",
   "languageserver": {
     "haskell": {
-      "command": "ghcide-stack",
-      "args": [ "" ],
+      "command": "haskell-language-server-wrapper",
+      "args": [ "--lsp" ],
       "rootPatterns": [ "*.cabal", "cabal.config", "cabal.project", "package.yaml", "stack.yaml" ],
       "filetypes": [ "hs", "lhs", "haskell" ],
-      "initializationOptions": { "languageServerHaskell": { "hlintOn": true }
+      "initializationOptions": { "languageServerHaskell": { "hlintOn": true, "formattingProvider": "floskell" }
       }
     }
   }
