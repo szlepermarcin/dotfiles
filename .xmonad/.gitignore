@@ -1,0 +1,6 @@
+.stack-work
+bin
+xmonad.o
+*.hi
+*.errors
+xmonad-x86_64-linux

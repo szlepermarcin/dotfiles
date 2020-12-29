@@ -27,4 +27,4 @@ picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 #starting user applications at boot time
-nitrogen --restore &
+variety &
