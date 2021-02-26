@@ -1,13 +1,13 @@
 module Keys (myKeys) where
 
-import qualified Data.Map as M
+import qualified Data.Map                            as M
 import           Graphics.X11.ExtraTypes.XF86
 import           System.Exit
 import           XMonad
 import           XMonad.Actions.CycleWS
 import           XMonad.Layout.MultiToggle
 import           XMonad.Layout.MultiToggle.Instances
-import qualified XMonad.StackSet as W
+import qualified XMonad.StackSet                     as W
 
 runInTerminal :: XConfig l -> [Char] -> [Char]
 runInTerminal conf command = XMonad.terminal conf ++ " -e " ++ command

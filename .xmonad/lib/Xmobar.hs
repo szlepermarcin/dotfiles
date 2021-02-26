@@ -34,11 +34,11 @@ myXmobarConf h conf =
                  , ppSep = "  "
                  , ppWsSep = "  "
                  , ppLayout = \x -> case x of
-                     "Spacing Tall" -> "<fn=1>Tall</fn>"
-                     "Spacing Grid" -> "<fn=1>Grid</fn>"
-                     "Spacing Spiral" -> "<fn=1>Spiral</fn>"
+                     "Spacing Tall"     -> "<fn=1>Tall</fn>"
+                     "Spacing Grid"     -> "<fn=1>Grid</fn>"
+                     "Spacing Spiral"   -> "<fn=1>Spiral</fn>"
                      "Spacing ThreeCol" -> "<fn=1>ThreeColMid</fn>"
-                     "Spacing Full" -> "<fn=1>Full</fn>"
-                     _ -> x
+                     "Spacing Full"     -> "<fn=1>Full</fn>"
+                     _                  -> x
                  }
        }

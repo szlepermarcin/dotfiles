@@ -1,13 +1,13 @@
+import           Autostart                 (myStartupHook)
+import           HandleEventHook           (myHandleEventHook)
+import           Keys                      (myKeys)
+import           Layout                    (myLayoutHook)
+import           ManageHook                (myManageHook)
+import           Mouse                     (myMouseBindings)
+import           Workspaces                (myWorkspaces)
 import           XMonad
 import           XMonad.Hooks.EwmhDesktops
-import           Autostart (myStartupHook)
-import           HandleEventHook (myHandleEventHook)
-import           Keys (myKeys)
-import           Layout (myLayoutHook)
-import           ManageHook (myManageHook)
-import           Mouse (myMouseBindings)
-import           Workspaces (myWorkspaces)
-import           Xmobar (spawnXmobar, myXmobarConf)
+import           Xmobar                    (myXmobarConf, spawnXmobar)
 
 mydefaults =
   def { terminal = "terminator"

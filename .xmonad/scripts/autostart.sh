@@ -25,6 +25,8 @@ run xfce4-power-manager &
 picom --config $HOME/.xmonad/scripts/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
+trayer --edge top --align right --width 10 --height 30 --expand true --SetDockType true --SetPartialStrut true --transparent true --alpha 0 --tint 0x2F343F --monitor 1 --padding 1 &
+
 
 #starting user applications at boot time
 variety &

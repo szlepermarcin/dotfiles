@@ -6,7 +6,7 @@ Config {
     additionalFonts = ["xft:Noto Sans:size=10:style=Bold","xft:FontAwesome:style=Regular:size=13"]
    , bgColor          = "#2F343F"
    , fgColor          = "white"
-   , position         = TopSize C 100 30
+   , position         = TopSize L 90 30
    , textOffset       = -1
    , iconOffset       = -8
    , alpha            = 255

@@ -1,10 +1,11 @@
 module ManageHook (myManageHook) where
 
 import           Control.Monad
-import           XMonad.ManageHook
+import           Workspaces                 (myWorkspaces)
+import           XMonad.Hooks.ManageDocks
 import           XMonad.Hooks.ManageHelpers
-import qualified XMonad.StackSet as W
-import           Workspaces (myWorkspaces)
+import           XMonad.ManageHook
+import qualified XMonad.StackSet            as W
 
 myManageHook = composeAll . concat
   $ [ [isDialog --> doCenterFloat]
@@ -41,7 +42,9 @@ myManageHook = composeAll . concat
       | c <- my9Shifts]
     , [className =? c --> doShift (myWorkspaces !! 9)
         <+> viewShift (myWorkspaces !! 9)
-      | c <- my10Shifts]]
+      | c <- my10Shifts]
+    , [manageDocks]
+    ]
   where
     viewShift = doF . liftM2 (.) W.greedyView W.shift
 
@@ -59,7 +62,7 @@ myManageHook = composeAll . concat
 
     myRFloats = []
 
-    myIgnores = ["desktop_window"]
+    myIgnores = ["desktop_window", "Trayer"]
 
     my1Shifts = ["Chromium", "Vivaldi-stable", "Firefox", "Brave-browser"]
 
