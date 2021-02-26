@@ -440,9 +440,12 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Haskell plugins
 nnoremap <silent> ;h :execute "Unite -start-insert haskellimport"<CR>
 "nnoremap <silent> <C-h> :execute "Unite hoogle"<CR> " too slow
-
 " Diagnostics highlighting
 "hi link ALEError Error
 "hi Warning term=underline cterm=underline ctermfg=Yellow gui=undercurl guisp=Gold
 "hi link ALEWarning Warning
 "hi link ALEInfo SpellCap
+nnoremap <nowait><expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-j>"
+nnoremap <nowait><expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-k>"
+inoremap <nowait><expr> <C-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
